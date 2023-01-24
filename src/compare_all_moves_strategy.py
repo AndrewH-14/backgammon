@@ -8,18 +8,27 @@ class CompareAllMoves(Strategy):
     def get_difficulty():
         return "Hard"
 
+    # Function that generates the features to be used when calculating the best
+    # possible move.
     def assess_board(self, colour, myboard):
+        # Get the current location of the pieces on the board
         pieces = myboard.get_pieces(colour)
+        # Get the number of pieces on the board
         pieces_on_board = len(pieces)
+        # Initialize the features that will be returned by the function
         sum_distances = 0
         number_of_singles = 0
         number_occupied_spaces = 0
         sum_single_distance_away_from_home = 0
         sum_distances_to_endzone = 0
+        # Calculate the sum of the pieces distance to home and the sum of the
+        # pieces distance to the endzone (last section of board)
         for piece in pieces:
             sum_distances = sum_distances + piece.spaces_to_home()
             if piece.spaces_to_home() > 6:
                 sum_distances_to_endzone += piece.spaces_to_home() - 6
+        # Get the number of single pieces, the sum of the single pieces distance
+        # to home, and the number of occupied spaces.
         for location in range(1, 25):
             pieces = myboard.pieces_at(location)
             if len(pieces) != 0 and pieces[0].colour == colour:
@@ -28,8 +37,11 @@ class CompareAllMoves(Strategy):
                     sum_single_distance_away_from_home += 25 - pieces[0].spaces_to_home()
                 elif len(pieces) > 1:
                     number_occupied_spaces = number_occupied_spaces + 1
+        # Get the number of piece's the opponent has taken
         opponents_taken_pieces = len(myboard.get_taken_pieces(colour.other()))
+        # Get the number of opponent's pieces on the board
         opponent_pieces = myboard.get_pieces(colour.other())
+        # Get the sum of the opponents pieces to their home
         sum_distances_opponent = 0
         for piece in opponent_pieces:
             sum_distances_opponent = sum_distances_opponent + piece.spaces_to_home()
@@ -44,10 +56,16 @@ class CompareAllMoves(Strategy):
             'sum_distances_to_endzone': sum_distances_to_endzone,
         }
 
+    # Function that will start the process to determine the best move, then
+    # move the piece
     def move(self, board, colour, dice_roll, make_move, opponents_activity):
 
+        # Determine the best move available
         result = self.move_recursively(board, colour, dice_roll)
+        # If the roll is a double then the length will be 4
         not_a_double = len(dice_roll) == 2
+        # If the roll is not a double then also check the dice in the reverse
+        # order to ensure we currently have chosen the best possible move
         if not_a_double:
             new_dice_roll = dice_roll.copy()
             new_dice_roll.reverse()
@@ -57,25 +75,31 @@ class CompareAllMoves(Strategy):
                     len(result_swapped['best_moves']) >= len(result['best_moves']):
                 result = result_swapped
 
+        # Make the best move(s)
         if len(result['best_moves']) != 0:
             for move in result['best_moves']:
                 make_move(move['piece_at'], move['die_roll'])
 
+    # Function that will recursively check for the best move
     def move_recursively(self, board, colour, dice_rolls):
         best_board_value = float('inf')
         best_pieces_to_move = []
 
+        # Get the players current pieces
         pieces_to_try = [x.location for x in board.get_pieces(colour)]
         pieces_to_try = list(set(pieces_to_try))
 
+        # Get one piece from each location to test
         valid_pieces = []
         for piece_location in pieces_to_try:
             valid_pieces.append(board.get_piece_at(piece_location))
         valid_pieces.sort(key=Piece.spaces_to_home, reverse=True)
 
+        # Get the first dice roll
         dice_rolls_left = dice_rolls.copy()
         die_roll = dice_rolls_left.pop(0)
 
+        # Iterate through each piece and test possible moves
         for piece in valid_pieces:
             if board.is_move_possible(piece, die_roll):
                 board_copy = board.create_copy()

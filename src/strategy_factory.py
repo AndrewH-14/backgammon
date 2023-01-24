@@ -1,5 +1,10 @@
-from src.compare_all_moves_strategy import CompareAllMovesSimple
+from src.compare_all_moves_strategy import CompareAllMovesSimple, \
+    CompareAllMovesWeightingDistanceAndSingles, \
+        CompareAllMovesWeightingDistanceAndSinglesWithEndGame, \
+            CompareAllMovesWeightingDistance
 from src.strategies import MoveFurthestBackStrategy, HumanStrategy, MoveRandomPiece
+from src.achankins import player1_achankins,player2_achankins
+
 
 
 class StrategyFactory:
@@ -17,6 +22,11 @@ class StrategyFactory:
             MoveRandomPiece,
             MoveFurthestBackStrategy,
             CompareAllMovesSimple,
+            player1_achankins,
+            player2_achankins,
+            CompareAllMovesWeightingDistanceAndSinglesWithEndGame,
+            CompareAllMovesWeightingDistanceAndSingles,
+            CompareAllMovesWeightingDistance,
             HumanStrategy,
         ]
         return strategies
