@@ -35,7 +35,7 @@ class CompareAllMoves(Strategy):
                 if len(pieces) == 1:
                     number_of_singles = number_of_singles + 1
                     sum_single_distance_away_from_home += 25 - pieces[0].spaces_to_home()
-                elif len(pieces) > 1:
+                elif len(pieces) > 1: # Not counting single spaces
                     number_occupied_spaces = number_occupied_spaces + 1
         # Get the number of piece's the opponent has taken
         opponents_taken_pieces = len(myboard.get_taken_pieces(colour.other()))

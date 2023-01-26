@@ -18,14 +18,19 @@ class player1_achankins(CompareAllMoves):
     def evaluate_board(self, myboard, colour):
         board_stats = self.assess_board(colour, myboard)
 
-        board_value =  1.00 * board_stats['sum_distances']                      + \
-                       0.00 * board_stats['number_of_singles']                  + \
-                       0.00 * board_stats['number_occupied_spaces']             + \
-                       0.00 * board_stats['opponents_taken_pieces']             + \
-                       0.00 * board_stats['sum_distances_to_endzone']           + \
-                       0.00 * board_stats['sum_single_distance_away_from_home'] + \
-                       0.00 * board_stats['pieces_on_board']                    + \
-                       0.00 * board_stats['sum_distances_opponent']
+        weight_file = open("weights.txt", "r")
+        string_weights = weight_file.read()
+        weight_list = string_weights.split(",")
+        weight_file.close()
+
+        board_value = float(weight_list[0]) * board_stats['sum_distances']                      + \
+                      float(weight_list[1]) * board_stats['number_of_singles']                  + \
+                      float(weight_list[2]) * board_stats['number_occupied_spaces']             + \
+                      float(weight_list[3]) * board_stats['opponents_taken_pieces']             + \
+                      float(weight_list[4]) * board_stats['sum_distances_to_endzone']           + \
+                      float(weight_list[5]) * board_stats['sum_single_distance_away_from_home'] + \
+                      float(weight_list[6]) * board_stats['pieces_on_board']                    + \
+                      float(weight_list[7]) * board_stats['sum_distances_opponent']
         return board_value
 
 class player2_achankins(CompareAllMoves):
