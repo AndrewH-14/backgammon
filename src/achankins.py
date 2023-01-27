@@ -43,7 +43,8 @@ class player1_achankins(CompareAllMoves):
         board_stats = self.assess_board(colour, myboard)
 
         # Create a list of weights from the passed in string
-        weight_list = src.weight.weight.split(",")
+        #weight_list = src.weight.weight.split(",")
+        weight_list = src.weight.weight
 
         # Attempt to normalize the features between a value of 0...1 and weight them
         board_value = float(weight_list[0]) * (board_stats['sum_distances'] / 163.0)                      + \

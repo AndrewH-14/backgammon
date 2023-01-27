@@ -11,83 +11,74 @@ import os
 import threading
 import sys
 
-# Get the program ID, start idx, and end idx
-prog_id   = sys.argv[1]
-start_idx = int(sys.argv[2])
-end_idx   = int(sys.argv[3])
-
-# Read in the potential weight combinations to be tested
-weight_combination_file = open("combinations.txt", "r")
-weight_combination_string = weight_combination_file.read()
-weight_combination_list = weight_combination_string.split("\n")
-weight_combination_list_len = len(weight_combination_list)
+import numpy
+import ga
 
 # Create the thread class and give it a start and end index for the combination file.
 class thread():
     start_idx = 0
     end_idx = 0
     num_games = 0
-    def __init__(self, thread_name, thread_ID, start_idx, end_idx, num_games):
+    def __init__(self, thread_name, thread_ID):
         # threading.Thread.__init__(self)
         self.thread_name = thread_name
         self.thread_ID = thread_ID
-        self.start_idx = start_idx
-        self.end_idx = end_idx
-        self.num_games = num_games
 
     def run(self):
-        # Print off the
-        # Store the results file name
-        final_file_name = self.thread_name + "-results-" + prog_id + ".txt"
-        final_file = open(final_file_name, "w")
-        final_file.close()
-        # Iterate through the lines that this thread is responsible for
-        for idx in range(self.start_idx, self.end_idx + 1):
-            # Win count variables
-            white_win_count = 0
-            win_percentage  = 0.0
-            # Run the desired number of games and check the win percentage
-            for game_idx in range(0, self.num_games):
-                # Initialize the game object
-                game = Game(
-                    white_strategy=StrategyFactory.create_by_name("player1_achankins"),
-                    black_strategy=StrategyFactory.create_by_name("CompareAllMovesWeightingDistance"),
-                    first_player=Colour(randint(0, 1))
-                )
+        # Number of weights we are looking to optimize
+        num_weights = 8
 
-                # If the win percentage is less than 10 percent halfway through
-                # the weight test, move on to the next weight
-                if game_idx == (self.num_games // 2):
-                    if win_percentage < 0.10:
-                        break
+        """
+        Genetic algorithm parameters:
+            Mating pool size
+            Population size
+        """
+        solutions_per_pop  = 8
+        num_parents_mating = 4
 
-                # If the win percentage is less than 15 through 3/4 through the
-                # weight test, move on to the next weight
-                if game_idx == ((self.num_games * 3) // 4):
-                    if win_percentage < 0.10:
-                        break
+        # Defining the population size
+        # The population will have sol_per_pop chromosome where each chromosome
+        # has num_weights genes.
+        pop_size = (solutions_per_pop, num_weights)
+        # Create the initial population
+        new_population = numpy.random.uniform(low=-1.0, high=1.0, size=pop_size)
+        print(new_population)
 
-                # Remove the brackets from the line
-                line = weight_combination_list[idx].replace("[", "")
-                line = line.replace("]", "")
-                line = line.replace(" ", "")
-                src.weight.init(line)
+        num_generations = 10000
+        for generation in range(num_generations):
+            print("Generation: ", generation)
+            # Measure the fitness of each chromosome in the population
+            fitness = ga.cal_pop_fitness(new_population)
+            # Best option
+            for idx in range(len(new_population)):
+                print("Weights: " + str(new_population[idx]))
+                print("Fitness : ", fitness[idx])
 
-                # Run the backgammon game and output results to the output file
-                game.run_game(verbose=False)
-                if "white" == game.who_won():
-                    white_win_count += 1
-                    win_percentage = white_win_count / game_idx
+            # Selecting the best parents in the population for mating
+            parents = ga.select_mating_pool(new_population, fitness, num_parents_mating)
 
-            # If the current weight has a win percentage over 50 record it
-            if (win_percentage > 0.0):
-                final_file_name = self.thread_name + "-results-" + prog_id + ".txt"
-                final_file = open(final_file_name, "a")
-                final_file.write(line + "\n" + str(win_percentage) + "\n")
-                final_file.close()
+            # Generating next generation using crossover
+            offspring_crossover = ga.crossover(parents,
+                                               offspring_size=(pop_size[0]-parents.shape[0], num_weights))
+
+            # Adding some variations to the offspring using mutation
+            offspring_mutation = ga.mutation(offspring_crossover)
+
+            # Creating the new population based on the parents and offspring.
+            new_population[0:parents.shape[0], :] = parents
+            new_population[parents.shape[0]:, :] = offspring_mutation
+
+        # Getting the best solution after iterating finishing all generations.
+        #At first, the fitness is calculated for each solution in the final generation.
+        fitness = ga.cal_pop_fitness(new_population)
+        # Then return the index of that solution corresponding to the best fitness.
+        best_match_idx = numpy.where(fitness == numpy.max(fitness))
+
+        print("Best solution : ", new_population[best_match_idx, :])
+        print("Best solution fitness : ", fitness[best_match_idx])
 
 if __name__ == '__main__':
 
     # Initialize the thread and start it
-    thread1 = thread("thread1", 1, start_idx, end_idx, 50)
+    thread1 = thread("thread1", 1)
     thread1.run()
