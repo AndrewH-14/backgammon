@@ -37,7 +37,7 @@ class CompareAllMoves(Strategy):
                     sum_single_distance_away_from_home += 25 - pieces[0].spaces_to_home()
                 elif len(pieces) > 1: # Not counting single spaces
                     number_occupied_spaces = number_occupied_spaces + 1
-        # Get the number of piece's the opponent has taken
+        # Get the number of piece's we have taken from the opponent
         opponents_taken_pieces = len(myboard.get_taken_pieces(colour.other()))
         # Get the number of opponent's pieces on the board
         opponent_pieces = myboard.get_pieces(colour.other())
@@ -143,7 +143,6 @@ class CompareAllMovesWeightingDistance(CompareAllMoves):
 
     def evaluate_board(self, myboard, colour):
         board_stats = self.assess_board(colour, myboard)
-
         board_value = board_stats['sum_distances'] - float(board_stats['sum_distances_opponent'])/3 + \
                       2 * board_stats['number_of_singles'] - \
                       board_stats['number_occupied_spaces'] - board_stats['opponents_taken_pieces']

@@ -118,7 +118,7 @@ class Game:
             return None
         if len(available_rolls) == 1:
             return None
-        
+
         board = self.board.create_copy()
         rolls_to_move = []
         current_location = location
