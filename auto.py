@@ -38,9 +38,10 @@ while True:
         break
     weight = weight.replace("[", "")
     weight = weight.replace("]", "")
-    res.append(weight.split(","))
-    print(weight)
-
+    weight_list = weight.split(",")
+    res.append([weight_list[0], weight_list[1], weight_list[2], weight_list[3],
+                weight_list[4], weight_list[5], weight_list[6], weight_list[7]])
+combination_file.close()
 
 # Compute the start and end index
 num_weights = len(res)
@@ -84,37 +85,38 @@ class thread():
 
                 # If the win percentage is less than 10 percent halfway through
                 # the weight test, move on to the next weight
-                if game_idx == (self.num_games // 2):
-                    if win_percentage < 0.10:
-                        break
+                # if game_idx == (self.num_games // 2):
+                #     if win_percentage < 0.10:
+                #         break
 
                 # If the win percentage is less than 15 through 3/4 through the
                 # weight test, move on to the next weight
-                if game_idx == ((self.num_games * 3) // 4):
-                    if win_percentage < 0.10:
-                        break
+                # if game_idx == ((self.num_games * 3) // 4):
+                #     if win_percentage < 0.10:
+                #         break
 
                 # Remove the brackets from the line
                 src.weight.init(res[idx])
                 # Run the backgammon game and output results to the output file
                 game.run_game(verbose=False)
                 if "white" == str(game.who_won()):
-                    print("white won!")
+                    print("white won " + str(idx))
                     white_win_count += 1
-                    win_percentage = white_win_count / (game_idx + 1)
+                    # win_percentage = white_win_count / (game_idx + 1)
                 else:
-                    print("black won!")
+                    print("black won " + str(idx))
 
             print("###########################################################")
             # If the current weight has a win percentage over 50 record it
-            if (win_percentage > 0.30):
+            win_percentage = white_win_count / self.num_games
+            if (win_percentage > 0.50):
                 final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
                 final_file = open(final_file_name, "a")
-                final_file.write(str(res[idx]) + "\n" + str(win_percentage) + "\n")
+                final_file.write(str(res[idx]) + str(win_percentage) + "\n")
                 final_file.close()
 
 if __name__ == '__main__':
 
     # Initialize the thread and start it
-    thread1 = thread("thread1", 1, start_idx, end_idx, 100)
+    thread1 = thread("thread1", 1, start_idx, end_idx, 300)
     thread1.run()
