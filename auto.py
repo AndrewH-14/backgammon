@@ -39,8 +39,8 @@ while True:
     weight = weight.replace("[", "")
     weight = weight.replace("]", "")
     weight_list = weight.split(",")
-    res.append([weight_list[0], weight_list[1], weight_list[2], weight_list[3],
-                weight_list[4], weight_list[5], weight_list[6], weight_list[7]])
+    res.append([float(weight_list[0]), float(weight_list[1]), float(weight_list[2]), float(weight_list[3]),
+                float(weight_list[4]), float(weight_list[5]), float(weight_list[6]), float(weight_list[7])])
 combination_file.close()
 
 # Compute the start and end index
@@ -48,7 +48,11 @@ num_weights = len(res)
 print(num_weights)
 section_len = num_weights // num_prog
 start_idx   = (section_len * prog_id_int)
-end_idx     = (section_len * prog_id_int) + section_len - 1
+end_idx = 0
+if num_prog == (prog_id_int + 1):
+    end_idx = num_weights - 1
+else:
+    end_idx = (section_len * prog_id_int) + section_len - 1
 
 # Create the thread class and give it a start and end index for the combination file.
 class thread():
@@ -79,7 +83,7 @@ class thread():
                 # Initialize the game object
                 game = Game(
                     white_strategy=StrategyFactory.create_by_name("player1_achankins"),
-                    black_strategy=StrategyFactory.create_by_name("CompareAllMovesWeightingDistance"),
+                    black_strategy=StrategyFactory.create_by_name("MoveFurthestBackStrategy"),
                     first_player=Colour(randint(0, 1))
                 )
 
@@ -112,11 +116,11 @@ class thread():
             if (win_percentage > 0.50):
                 final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
                 final_file = open(final_file_name, "a")
-                final_file.write(str(res[idx]) + str(win_percentage) + "\n")
+                final_file.write(str(res[idx]) + "\n" + str(win_percentage) + "\n")
                 final_file.close()
 
 if __name__ == '__main__':
 
     # Initialize the thread and start it
-    thread1 = thread("thread1", 1, start_idx, end_idx, 300)
+    thread1 = thread("thread1", 1, start_idx, end_idx, 600)
     thread1.run()
