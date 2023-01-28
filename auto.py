@@ -18,30 +18,28 @@ prog_id_str = sys.argv[1]
 num_prog    = int(sys.argv[2])
 
 # Generate weigths and store them in a list
-"""
-res = [[a, b, c, d, e, f, g, h] for a in [-1, 0, 1]
-                                for b in [-1, 0, 1]
-                                for c in [-1, 0, 1]
-                                for d in [-1, 0, 1]
-                                for e in [-1, 0, 1]
-                                for f in [-1, 0, 1]
-                                for g in [-1, 0, 1]
-                                for h in [-1, 0, 1]]
-"""
+res = [[a, b, c, d, e, f, g, h] for a in [0.75, 1]
+                                for b in [-1, -0.75]
+                                for c in [-1, -0.75]
+                                for d in [-0.25, 0, 0.25]
+                                for e in [0.75, 1]
+                                for f in [0.75, 1]
+                                for g in [0.75, 1]
+                                for h in [-1, -0.75]]
 
 # Get the weights from a file
-res = []
-combination_file = open("final_results.txt", "r")
-while True:
-    weight = combination_file.readline()
-    if weight == "":
-        break
-    weight = weight.replace("[", "")
-    weight = weight.replace("]", "")
-    weight_list = weight.split(",")
-    res.append([float(weight_list[0]), float(weight_list[1]), float(weight_list[2]), float(weight_list[3]),
-                float(weight_list[4]), float(weight_list[5]), float(weight_list[6]), float(weight_list[7])])
-combination_file.close()
+# res = []
+# combination_file = open("best_results.txt", "r")
+# while True:
+#     weight = combination_file.readline()
+#     if weight == "":
+#         break
+#     weight = weight.replace("[", "")
+#     weight = weight.replace("]", "")
+#     weight_list = weight.split(",")
+#     res.append([float(weight_list[0]), float(weight_list[1]), float(weight_list[2]), float(weight_list[3]),
+#                 float(weight_list[4]), float(weight_list[5]), float(weight_list[6]), float(weight_list[7])])
+# combination_file.close()
 
 # Compute the start and end index
 num_weights = len(res)
@@ -83,7 +81,7 @@ class thread():
                 # Initialize the game object
                 game = Game(
                     white_strategy=StrategyFactory.create_by_name("player1_achankins"),
-                    black_strategy=StrategyFactory.create_by_name("MoveFurthestBackStrategy"),
+                    black_strategy=StrategyFactory.create_by_name("CompareAllMovesWeightingDistance"),
                     first_player=Colour(randint(0, 1))
                 )
 
@@ -122,5 +120,5 @@ class thread():
 if __name__ == '__main__':
 
     # Initialize the thread and start it
-    thread1 = thread("thread1", 1, start_idx, end_idx, 600)
+    thread1 = thread("thread1", 1, start_idx, end_idx, 200)
     thread1.run()
