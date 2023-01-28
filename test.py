@@ -28,7 +28,7 @@ very_very_bad_weights = [-0.5, -0.25, 0]
 #                                 for g in bad_range
 #                                 for h in not_relevant]
 
-initial = [-1.0, 0, 1.0]
+initial = [-1, 0, 1]
 res = [[a, b, c, d, e, f, g, h] for a in initial
                                 for b in initial
                                 for c in initial

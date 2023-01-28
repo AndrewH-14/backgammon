@@ -43,7 +43,9 @@ class player1_achankins(CompareAllMoves):
         board_stats = self.assess_board(colour, myboard)
 
         # Create a list of weights from the passed in string
-        weight_list = src.weight.weight.split(",")
+        # weight_list = src.weight.weight.split(",")
+        weight_list = src.weight.weight
+        # print("Weight used: " + str(weight_list))
 
         # Attempt to normalize the features between a value of 0...1 and weight them
         board_value = float(weight_list[0]) * (board_stats['sum_distances'] / 163.0)                      + \
@@ -81,8 +83,8 @@ class player2_achankins(CompareAllMoves):
     def evaluate_board(self, myboard, colour):
         board_stats = self.assess_board(colour, myboard)
 
-        board_value = board_stats['sum_distances'] + 2 * board_stats['number_of_singles'] - \
-                      board_stats['number_occupied_spaces'] - board_stats['opponents_taken_pieces']
+        #board_value = board_stats['sum_distances'] + 2 * board_stats['number_of_singles'] - \
+                      #board_stats['number_occupied_spaces'] - board_stats['opponents_taken_pieces']
         # board_value = board_stats[NOVEL_FEATURE] * 2 + board_stats['sum_distances'] + 2 * board_stats['number_of_singles'] - \
         #               board_stats['number_occupied_spaces'] - board_stats['opponents_taken_pieces']
-        return board_value
+        return 0

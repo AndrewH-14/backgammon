@@ -1,0 +1,1241 @@
+Initial Board State:
+Board ID: 1
+Rolls left: [5, 2]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+167
+153
+1
+4
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 2
+Parent Board ID: 1
+Rolls left: [2]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+162
+153
+1
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 3
+Parent Board ID: 1
+Rolls left: [2]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+162
+153
+3
+3
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 4
+Parent Board ID: 1
+Rolls left: [2]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+162
+153
+1
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   3W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 5
+Parent Board ID: 1
+Rolls left: [2]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+162
+153
+2
+4
+0
+Board's value: 111.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 6
+Parent Board ID: 1
+Rolls left: [5]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+165
+153
+1
+4
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  1W  2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 7
+Parent Board ID: 1
+Rolls left: [5]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+165
+153
+3
+3
+0
+Board's value: 117.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 8
+Parent Board ID: 1
+Rolls left: [5]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+165
+153
+2
+4
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 9
+Parent Board ID: 1
+Rolls left: [5]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+165
+153
+2
+3
+0
+Board's value: 115.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+First Move Board State:
+Board ID: 10
+Parent Board ID: 1
+Rolls left: [5]
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+165
+153
+2
+4
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   1W  2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 11
+Parent Board ID: 2
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   2W | 6B  1W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 12
+Parent Board ID: 2
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   1W  .   .  | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 13
+Parent Board ID: 2
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   1W | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 14
+Parent Board ID: 2
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+3
+0
+Board's value: 110.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 15
+Parent Board ID: 2
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   1W  2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 16
+Parent Board ID: 3
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   .  | 6B  1W  1W  2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 17
+Parent Board ID: 3
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   1W | 6B  .   .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 18
+Parent Board ID: 3
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+3
+0
+Board's value: 110.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 5W  .   .   .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 19
+Parent Board ID: 3
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+3
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   1W  .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 20
+Parent Board ID: 3
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+2
+0
+Board's value: 115.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 21
+Parent Board ID: 3
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+3
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   1W  2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 22
+Parent Board ID: 4
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   3W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  1W  2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 23
+Parent Board ID: 4
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   3W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   1W | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 24
+Parent Board ID: 4
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   3W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 2W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 25
+Parent Board ID: 4
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 26
+Parent Board ID: 4
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   3W  .  | 5W  .   1W  2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 27
+Parent Board ID: 5
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  1W  2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 28
+Parent Board ID: 5
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+3
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 29
+Parent Board ID: 5
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+4
+0
+Board's value: 111.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   2W  .  | 5W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 30
+Parent Board ID: 5
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 6W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 31
+Parent Board ID: 5
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+4
+0
+Board's value: 111.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 4W  .   1W  2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 32
+Parent Board ID: 5
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 1
+Black's taken pieces: 0 | Black's completed pieces: 0
+161
+153
+1
+4
+0
+Board's value: 108.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 33
+Parent Board ID: 6
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   1W  .   .  | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 34
+Parent Board ID: 6
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   .  | 6B  1W  1W  2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 35
+Parent Board ID: 6
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   3W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  1W  2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 36
+Parent Board ID: 6
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  1W  2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 37
+Parent Board ID: 7
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   2W | 6B  1W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 38
+Parent Board ID: 7
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   1W | 6B  .   .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 39
+Parent Board ID: 7
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+3
+0
+Board's value: 110.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 5W  .   .   .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 40
+Parent Board ID: 7
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   3W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   1W | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 41
+Parent Board ID: 7
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+3
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 5W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 42
+Parent Board ID: 8
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   1W | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 43
+Parent Board ID: 8
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+3
+0
+Board's value: 114.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   2W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   1W  .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 44
+Parent Board ID: 8
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+4
+0
+Board's value: 109.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   3W  .  | 6W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 2W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 45
+Parent Board ID: 8
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 46
+Parent Board ID: 8
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+4
+0
+Board's value: 111.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  1W  1B  .   2W  .  | 5W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 47
+Parent Board ID: 9
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+3
+0
+Board's value: 110.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 48
+Parent Board ID: 9
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+2
+0
+Board's value: 115.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 49
+Parent Board ID: 9
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 50
+Parent Board ID: 9
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 6W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 51
+Parent Board ID: 10
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+2
+3
+0
+Board's value: 110.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   1W | 6B  2W  .   2B  .   .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 52
+Parent Board ID: 10
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+4
+2
+0
+Board's value: 115.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   1W  .   .   .  | 6B  1W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 53
+Parent Board ID: 10
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+1
+4
+0
+Board's value: 107.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   2W  .  | 7W  .   .   2B  .   .  |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 3W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+
+Second Move Board State:
+Board ID: 54
+Parent Board ID: 10
+Rolls left: []
+White's taken pieces: 0 | White's completed pieces: 0
+Black's taken pieces: 0 | Black's completed pieces: 0
+160
+153
+3
+3
+0
+Board's value: 112.0
+  12                  17   18                  23
+---------------------------------------------------
+| 4B  .   1B  .   1W  .  | 6W  .   .   2B  .   1W |
+|                        |                        |
+|                        |                        |
+|                        |                        |
+| 4W  .   .   .   .   .  | 6B  2W  .   2B  1W  .  |
+---------------------------------------------------
+  11                  6    5                   0
+
+

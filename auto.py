@@ -12,15 +12,42 @@ import threading
 import sys
 
 # Get the program ID, start idx, and end idx
-prog_id   = sys.argv[1]
-start_idx = int(sys.argv[2])
-end_idx   = int(sys.argv[3])
+# python3 auto.py <prog_id> <num_prog>
+prog_id_int = int(sys.argv[1])
+prog_id_str = sys.argv[1]
+num_prog    = int(sys.argv[2])
 
-# Read in the potential weight combinations to be tested
-weight_combination_file = open("combinations.txt", "r")
-weight_combination_string = weight_combination_file.read()
-weight_combination_list = weight_combination_string.split("\n")
-weight_combination_list_len = len(weight_combination_list)
+# Generate weigths and store them in a list
+"""
+res = [[a, b, c, d, e, f, g, h] for a in [-1, 0, 1]
+                                for b in [-1, 0, 1]
+                                for c in [-1, 0, 1]
+                                for d in [-1, 0, 1]
+                                for e in [-1, 0, 1]
+                                for f in [-1, 0, 1]
+                                for g in [-1, 0, 1]
+                                for h in [-1, 0, 1]]
+"""
+
+# Get the weights from a file
+res = []
+combination_file = open("final_results.txt", "r")
+while True:
+    weight = combination_file.readline()
+    if weight == "":
+        break
+    weight = weight.replace("[", "")
+    weight = weight.replace("]", "")
+    res.append(weight.split(","))
+    print(weight)
+
+
+# Compute the start and end index
+num_weights = len(res)
+print(num_weights)
+section_len = num_weights // num_prog
+start_idx   = (section_len * prog_id_int)
+end_idx     = (section_len * prog_id_int) + section_len - 1
 
 # Create the thread class and give it a start and end index for the combination file.
 class thread():
@@ -38,7 +65,7 @@ class thread():
     def run(self):
         # Print off the
         # Store the results file name
-        final_file_name = self.thread_name + "-results-" + prog_id + ".txt"
+        final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
         final_file = open(final_file_name, "w")
         final_file.close()
         # Iterate through the lines that this thread is responsible for
@@ -68,26 +95,26 @@ class thread():
                         break
 
                 # Remove the brackets from the line
-                line = weight_combination_list[idx].replace("[", "")
-                line = line.replace("]", "")
-                line = line.replace(" ", "")
-                src.weight.init(line)
-
+                src.weight.init(res[idx])
                 # Run the backgammon game and output results to the output file
                 game.run_game(verbose=False)
-                if "white" == game.who_won():
+                if "white" == str(game.who_won()):
+                    print("white won!")
                     white_win_count += 1
-                    win_percentage = white_win_count / game_idx
+                    win_percentage = white_win_count / (game_idx + 1)
+                else:
+                    print("black won!")
 
+            print("###########################################################")
             # If the current weight has a win percentage over 50 record it
-            if (win_percentage > 0.0):
-                final_file_name = self.thread_name + "-results-" + prog_id + ".txt"
+            if (win_percentage > 0.30):
+                final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
                 final_file = open(final_file_name, "a")
-                final_file.write(line + "\n" + str(win_percentage) + "\n")
+                final_file.write(str(res[idx]) + "\n" + str(win_percentage) + "\n")
                 final_file.close()
 
 if __name__ == '__main__':
 
     # Initialize the thread and start it
-    thread1 = thread("thread1", 1, start_idx, end_idx, 50)
+    thread1 = thread("thread1", 1, start_idx, end_idx, 100)
     thread1.run()
