@@ -102,11 +102,11 @@ class thread():
                 # Run the backgammon game and output results to the output file
                 game.run_game(verbose=False)
                 if "white" == str(game.who_won()):
-                    print("white won " + str(idx))
+                    print("white won " + str(idx) + " " + str(game_idx))
                     white_win_count += 1
                     # win_percentage = white_win_count / (game_idx + 1)
                 else:
-                    print("black won " + str(idx))
+                    print("black won " + str(idx) + " " + str(game_idx))
 
             print("###########################################################")
             # If the current weight has a win percentage over 50 record it

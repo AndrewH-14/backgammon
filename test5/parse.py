@@ -13,12 +13,13 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.5:
+    if win_percentage > 0.6:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
         weight = weight.replace("'", "")
         output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
 file.close()
 
 # Parse the second file
@@ -33,12 +34,13 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.5:
+    if win_percentage > 0.62:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
         weight = weight.replace("'", "")
         output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
 file.close()
 
 # Parse the third file
@@ -53,12 +55,13 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.5:
+    if win_percentage > 0.62:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
         weight = weight.replace("'", "")
         output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
 file.close()
 
 # Parse the fourth file
@@ -73,12 +76,13 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.5:
+    if win_percentage > 0.62:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
         weight = weight.replace("'", "")
         output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
 file.close()
 
 # Parse the fifth file
@@ -93,12 +97,13 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.5:
+    if win_percentage > 0.62:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
         weight = weight.replace("'", "")
         output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
 file.close()
 
 # Parse the sixth file
@@ -113,12 +118,55 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.5:
+    if win_percentage > 0.62:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
         weight = weight.replace("'", "")
         output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
+file.close()
+
+# Parse the seventh file
+file = open("thread1-results-6.txt", "r")
+while True:
+
+    # Get the candidate from the file
+    weight = file.readline()
+
+    if weight == "":
+        break
+
+    win_percentage = float(file.readline())
+
+    if win_percentage > 0.62:
+        weight = weight.replace("n", "")
+        weight = weight.replace("\\", "")
+        weight = weight.replace(" ", "")
+        weight = weight.replace("'", "")
+        output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
+file.close()
+
+# Parse the seventh file
+file = open("thread1-results-7.txt", "r")
+while True:
+
+    # Get the candidate from the file
+    weight = file.readline()
+
+    if weight == "":
+        break
+
+    win_percentage = float(file.readline())
+
+    if win_percentage > 0.62:
+        weight = weight.replace("n", "")
+        weight = weight.replace("\\", "")
+        weight = weight.replace(" ", "")
+        weight = weight.replace("'", "")
+        output_file.write(weight)
+        # output_file.write(str(win_percentage) + "\n")
 file.close()
 
 # Close the outpout file

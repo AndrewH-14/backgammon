@@ -28,6 +28,7 @@ very_very_bad_weights = [-0.5, -0.25, 0]
 #                                 for g in bad_range
 #                                 for h in not_relevant]
 
+"""
 initial = [-1, 0, 1]
 res = [[a, b, c, d, e, f, g, h] for a in initial
                                 for b in initial
@@ -37,6 +38,16 @@ res = [[a, b, c, d, e, f, g, h] for a in initial
                                 for f in initial
                                 for g in initial
                                 for h in initial]
+"""
+
+res = [[a, b, c, d, e, f, g, h] for a in [0.75, 1]
+                                for b in [-1, -0.75]
+                                for c in [-1, -0.75]
+                                for d in [-0.25, 0, 0.25]
+                                for e in [0.75, 1]
+                                for f in [0.75, 1]
+                                for g in [0.75, 1]
+                                for h in [-1, -0.75]]
 
 weights_file = open("combinations.txt", "w")
 for idx in range(0, len(res)):
