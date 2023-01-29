@@ -13,7 +13,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.6:
+    if win_percentage >= 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
@@ -34,7 +34,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.62:
+    if win_percentage > 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
@@ -55,7 +55,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.62:
+    if win_percentage > 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
@@ -76,7 +76,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.62:
+    if win_percentage > 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
@@ -97,7 +97,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.62:
+    if win_percentage > 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
@@ -118,7 +118,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.62:
+    if win_percentage > 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
@@ -139,7 +139,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.62:
+    if win_percentage > 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
@@ -160,7 +160,7 @@ while True:
 
     win_percentage = float(file.readline())
 
-    if win_percentage > 0.65:
+    if win_percentage > 0.695:
         weight = weight.replace("n", "")
         weight = weight.replace("\\", "")
         weight = weight.replace(" ", "")
