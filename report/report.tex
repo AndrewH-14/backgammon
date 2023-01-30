@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fphw Assignment
+% LaTeX Template
+% Version 1.0 (27/04/2019)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Class by Felipe Portales-Oliva (f.portales.oliva@gmail.com) with template
+% content and modifications by Vel (vel@LaTeXTemplates.com)
+%
+% Template (this file) License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	12pt, % Default font size, values between 10pt-12pt are allowed
+	%letterpaper, % Uncomment for US letter paper size
+	%spanish, % Uncomment for Spanish
+]{fphw}
+
+% Template-specific packages
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+\usepackage{listings} % Required for insertion of code
+
+\usepackage{enumerate} % To modify the enumerate environment
+
+\usepackage{color} % To color the code
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Homework \#1} % Assignment title
+
+\author{Andrew Hankins} % Student name
+
+\date{February 8th, 2023} % Due date
+
+\institute{University of Alabama \\ College of Engineering} % Institute or school name
+
+\class{Artificial Intelligence (CS 565)} % Course or class name
+
+\professor{Dr. Monica Anderson Herzog} % Professor or teacher in charge of the assignment
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the assignment title, created automatically using the information in the custom commands above
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT CONTENT
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+\section*{Updated Python Files}
+
+\begin{problem}
+	\lstinputlisting[
+		title=achankins.py, % Caption above the listing
+		label=lst:achankins1, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		firstline=1,
+		lastline= 65,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny
+	]{../src/achankins.py}
+\end{problem}
+
+\begin{problem}
+	\lstinputlisting[
+		title=compare\_all\_moves\_strategy.py, % Caption above the listing
+		label=lst:achankins1, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		firstline=1,
+		lastline= 95,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny
+	]{../src/compare_all_moves_strategy.py}
+\end{problem}
+
+\begin{problem}
+	\lstinputlisting[
+		title=compare\_all\_moves\_strategy.py, % Caption above the listing
+		label=lst:achankins1, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		firstline=96,
+		lastline= 195,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny,
+		firstnumber=96
+	]{../src/compare_all_moves_strategy.py}
+\end{problem}
+
+%----------------------------------------------------------------------------------------
+
+\section*{Explanation of Novel Feature}
+
+%----------------------------------------------------------------------------------------
+
+\section*{Comparison of 5 Best Weighting Functions}
+
+%----------------------------------------------------------------------------------------
+
+\section*{Player Comparisons}
+
+\begin{problem}
+	
+\end{problem}
+
+\end{document}

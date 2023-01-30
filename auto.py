@@ -30,18 +30,20 @@ res = [[a, b, c, d, e, f, g, h] for a in [0.65, 0.75, 0.85]
 """
 
 # Get the weights from a file
-res = []
-combination_file = open("best_results.txt", "r")
-while True:
-    weight = combination_file.readline()
-    if weight == "":
-        break
-    weight = weight.replace("[", "")
-    weight = weight.replace("]", "")
-    weight_list = weight.split(",")
-    res.append([float(weight_list[0]), float(weight_list[1]), float(weight_list[2]), float(weight_list[3]),
-                float(weight_list[4]), float(weight_list[5]), float(weight_list[6]), float(weight_list[7])])
-combination_file.close()
+# res = []
+# combination_file = open("best_results.txt", "r")
+# while True:
+#     weight = combination_file.readline()
+#     if weight == "":
+#         break
+#     weight = weight.replace("[", "")
+#     weight = weight.replace("]", "")
+#     weight_list = weight.split(",")
+#     res.append([float(weight_list[0]), float(weight_list[1]), float(weight_list[2]), float(weight_list[3]),
+#                 float(weight_list[4]), float(weight_list[5]), float(weight_list[6]), float(weight_list[7])])
+# combination_file.close()
+
+res = [[0.75,-0.75,-0.75,-0.25,1.0,1.0,1.0,-1.0]]
 
 # Compute the start and end index
 num_weights = len(res)
