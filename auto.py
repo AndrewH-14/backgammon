@@ -18,16 +18,15 @@ prog_id_str = sys.argv[1]
 num_prog    = int(sys.argv[2])
 
 # Generate weigths and store them in a list
-"""
-res = [[a, b, c, d, e, f, g, h] for a in [0.65, 0.75, 0.85]
-                                for b in [-0.65, -0.75, -0.85]
-                                for c in [-0.65, -0.75, -0.85]
-                                for d in [-0.15, -0.25, -0.35]
-                                for e in [0.9, 1]
-                                for f in [0.9, 1]
-                                for g in [0.9, 1]
-                                for h in [-0.9, -1.0]]
-"""
+res = [[a, b, c, d, e, f, g, h, i] for a in [0.75, 1]
+                                   for b in [-0.75, -1.0]
+                                   for c in [-0.75, -1.0]
+                                   for d in [-0.25]
+                                   for e in [0.9]
+                                   for f in [0.9]
+                                   for g in [0.9, 1]
+                                   for h in [-0.9, -1.0]
+                                   for i in [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]]
 
 # Get the weights from a file
 # res = []
@@ -43,7 +42,7 @@ res = [[a, b, c, d, e, f, g, h] for a in [0.65, 0.75, 0.85]
 #                 float(weight_list[4]), float(weight_list[5]), float(weight_list[6]), float(weight_list[7])])
 # combination_file.close()
 
-res = [[0.75,-0.75,-0.75,-0.25,1.0,1.0,1.0,-1.0]]
+# res = [[0.75,-0.75,-0.75,-0.25,1.0,1.0,1.0,-1.0]]
 
 # Compute the start and end index
 num_weights = len(res)
@@ -84,7 +83,7 @@ class thread():
             for game_idx in range(0, self.num_games):
                 # Initialize the game object
                 game = Game(
-                    white_strategy=StrategyFactory.create_by_name("player1_achankins"),
+                    white_strategy=StrategyFactory.create_by_name("player2_achankins"),
                     black_strategy=StrategyFactory.create_by_name("CompareAllMovesWeightingDistance"),
                     first_player=Colour(randint(0, 1))
                 )
@@ -104,7 +103,7 @@ class thread():
             print("###########################################################")
             # If the current weight has a win percentage over 50 record it
             win_percentage = white_win_count / self.num_games
-            if (win_percentage > 0.65):
+            if (win_percentage > 0.55):
                 final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
                 final_file = open(final_file_name, "a")
                 final_file.write(str(res[idx]) + "\n" + str(win_percentage) + "\n")
@@ -113,5 +112,5 @@ class thread():
 if __name__ == '__main__':
 
     # Initialize the thread and start it
-    thread1 = thread("thread1", 1, start_idx, end_idx, 500)
+    thread1 = thread("thread1", 1, start_idx, end_idx, 200)
     thread1.run()

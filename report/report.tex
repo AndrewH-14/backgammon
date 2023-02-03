@@ -40,6 +40,8 @@
 
 \usepackage{color} % To color the code
 
+\usepackage{float} % here for H placement parameter
+
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -72,7 +74,7 @@
 
 %------------------------------------------------
 
-\section*{Updated Python Files}
+\section{Updated Python Files}
 
 \begin{problem}
 	\lstinputlisting[
@@ -97,7 +99,7 @@
 \begin{problem}
 	\lstinputlisting[
 		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins1, % Label for referencing this listing
+		label=lst:achankins2, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -117,7 +119,7 @@
 \begin{problem}
 	\lstinputlisting[
 		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins1, % Label for referencing this listing
+		label=lst:achankins3, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -143,12 +145,312 @@
 
 \section*{Comparison of 5 Best Weighting Functions}
 
+The five best weighting functions that I found.
+
+\subsection*{Best Weighting Function}
+
+\hfill\\ \\  The first weighting function that I found
+
+\begin{lstlisting}[
+		title=compare\_all\_moves\_strategy.py, % Caption above the listing
+		label=lst:achankins10, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny,
+	]
+class player1_achankins(CompareAllMoves):
+
+    # Function that will evaluate the board
+    def evaluate_board(self, myboard, colour):
+    board_stats = self.assess_board(colour, myboard)
+
+    # Attempt to normalize the features between a value of 0...1 and weight them
+    board_value =  0.75 * (board_stats['sum_distances'] / 163.0)                                        + \
+                            -0.75 * (board_stats['number_of_singles'] / 7.0)                                     + \
+                            -0.75 * (board_stats['number_occupied_spaces'] / 7.0)                          + \
+                            -0.25 * (board_stats['opponents_taken_pieces'] / 1.0)                            + \
+                             0.9   * (board_stats['sum_distances_to_endzone'] / 75.0)                      + \
+                             0.9   * (board_stats['sum_single_distance_away_from_home'] / 100.0) + \
+                             1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
+                            -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
+    return board_value
+
+\end{lstlisting}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c | c c c c c||}
+		\hline
+		Opponent & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
+		\hline\hline
+		MoveFurthestBackStrategy &  6 & 10 & 15 & 100\% & 1 \\
+		\hline
+		CompareAllWeightingDistance & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		\hline
+	\end{tabular}
+	\caption{Weighting algorithm 1}
+	\label{table:1}
+\end{table}
+
+\subsection*{Second Best Weighting Function}
+
+\hfill\\ \\  The first weighting function that I found
+
+\begin{lstlisting}[
+		title=compare\_all\_moves\_strategy.py, % Caption above the listing
+		label=lst:achankins10, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny,
+	]
+class player1_achankins(CompareAllMoves):
+
+    # Function that will evaluate the board
+    def evaluate_board(self, myboard, colour):
+    board_stats = self.assess_board(colour, myboard)
+
+    # Attempt to normalize the features between a value of 0...1 and weight them
+    board_value =  0.75 * (board_stats['sum_distances'] / 163.0)                                        + \
+                            -0.75 * (board_stats['number_of_singles'] / 7.0)                                     + \
+                            -0.75 * (board_stats['number_occupied_spaces'] / 7.0)                          + \
+                            -0.25 * (board_stats['opponents_taken_pieces'] / 1.0)                            + \
+                             0.9   * (board_stats['sum_distances_to_endzone'] / 75.0)                      + \
+                             0.9   * (board_stats['sum_single_distance_away_from_home'] / 100.0) + \
+                             1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
+                            -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
+    return board_value
+
+\end{lstlisting}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{||c | c c c c c||}
+		\hline
+		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
+		\hline\hline
+		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		\hline
+		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		\hline
+	\end{tabular}
+	\caption{Weighting algorithm 2}
+	\label{table:2}
+\end{table}
+
+\subsection*{Third Best Weighting Function}
+
+\hfill\\ \\  The first weighting function that I found
+
+\begin{lstlisting}[
+		title=compare\_all\_moves\_strategy.py, % Caption above the listing
+		label=lst:achankins10, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny,
+	]
+class player1_achankins(CompareAllMoves):
+
+    # Function that will evaluate the board
+    def evaluate_board(self, myboard, colour):
+    board_stats = self.assess_board(colour, myboard)
+
+    # Attempt to normalize the features between a value of 0...1 and weight them
+    board_value =  0.75 * (board_stats['sum_distances'] / 163.0)                                        + \
+                            -0.75 * (board_stats['number_of_singles'] / 7.0)                                     + \
+                            -0.75 * (board_stats['number_occupied_spaces'] / 7.0)                          + \
+                            -0.25 * (board_stats['opponents_taken_pieces'] / 1.0)                            + \
+                             0.9   * (board_stats['sum_distances_to_endzone'] / 75.0)                      + \
+                             0.9   * (board_stats['sum_single_distance_away_from_home'] / 100.0) + \
+                             1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
+                            -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
+    return board_value
+
+\end{lstlisting}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{||c | c c c c c||}
+		\hline
+		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
+		\hline\hline
+		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		\hline
+		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		\hline
+	\end{tabular}
+	\caption{Weighting algorithm 3}
+	\label{table:3}
+\end{table}
+
+\subsection*{Fourth Best Weighting Function}
+
+\hfill\\ \\  The first weighting function that I found
+
+\begin{lstlisting}[
+		title=compare\_all\_moves\_strategy.py, % Caption above the listing
+		label=lst:achankins10, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny,
+	]
+class player1_achankins(CompareAllMoves):
+
+    # Function that will evaluate the board
+    def evaluate_board(self, myboard, colour):
+    board_stats = self.assess_board(colour, myboard)
+
+    # Attempt to normalize the features between a value of 0...1 and weight them
+    board_value =  0.75 * (board_stats['sum_distances'] / 163.0)                                        + \
+                            -0.75 * (board_stats['number_of_singles'] / 7.0)                                     + \
+                            -0.75 * (board_stats['number_occupied_spaces'] / 7.0)                          + \
+                            -0.25 * (board_stats['opponents_taken_pieces'] / 1.0)                            + \
+                             0.9   * (board_stats['sum_distances_to_endzone'] / 75.0)                      + \
+                             0.9   * (board_stats['sum_single_distance_away_from_home'] / 100.0) + \
+                             1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
+                            -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
+    return board_value
+
+\end{lstlisting}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{||c | c c c c c||}
+		\hline
+		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
+		\hline\hline
+		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		\hline
+		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		\hline
+	\end{tabular}
+	\caption{Weighting algorithm 4}
+	\label{table:4}
+\end{table}
+
+\pagebreak
+
+\subsection*{Fifth Best Weighting Function}
+
+\hfill\\ \\  The first weighting function that I found
+
+\begin{lstlisting}[
+		title=compare\_all\_moves\_strategy.py, % Caption above the listing
+		label=lst:achankins10, % Label for referencing this listing
+		language=Python, % Use Perl functions/syntax highlighting
+		frame=single, % Frame around the code listing
+		showstringspaces=false, % Don't put marks in string spaces
+		numbers=left, % Line numbers on left
+		numberstyle=\tiny, % Line numbers styling
+		breaklines=true,
+		columns=fullflexible,
+		commentstyle=\color{mygreen},
+		keywordstyle=\color{blue},
+		numberstyle=\tiny\color{mygray},
+		basicstyle=\tiny,
+	]
+class player1_achankins(CompareAllMoves):
+
+    # Function that will evaluate the board
+    def evaluate_board(self, myboard, colour):
+    board_stats = self.assess_board(colour, myboard)
+
+    # Attempt to normalize the features between a value of 0...1 and weight them
+    board_value =  0.75 * (board_stats['sum_distances'] / 163.0)                                        + \
+                            -0.75 * (board_stats['number_of_singles'] / 7.0)                                     + \
+                            -0.75 * (board_stats['number_occupied_spaces'] / 7.0)                          + \
+                            -0.25 * (board_stats['opponents_taken_pieces'] / 1.0)                            + \
+                             0.9   * (board_stats['sum_distances_to_endzone'] / 75.0)                      + \
+                             0.9   * (board_stats['sum_single_distance_away_from_home'] / 100.0) + \
+                             1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
+                            -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
+    return board_value
+
+\end{lstlisting}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{||c | c c c c c||}
+		\hline
+		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
+		\hline\hline
+		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		\hline
+		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		\hline
+	\end{tabular}
+	\caption{Weighting algorithm 5}
+	\label{table:5}
+\end{table}
+
 %----------------------------------------------------------------------------------------
 
 \section*{Player Comparisons}
 
-\begin{problem}
-	
-\end{problem}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{||c | c c c c c||}
+		\hline
+		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
+		\hline\hline
+		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		\hline
+		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		\hline
+	\end{tabular}
+	\caption{Comparison against MoveFurthestBackStrategy}
+	\label{table:6}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{||c | c c c c c||}
+		\hline
+		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
+		\hline\hline
+		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		\hline
+		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		\hline
+	\end{tabular}
+	\caption{Comparison against CompareAllMovesWeightingDistance}
+	\label{table:7}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+\section*{Game Tree}
+
 
 \end{document}

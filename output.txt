@@ -3,11 +3,6 @@ Board ID: 1
 Rolls left: [5, 2]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-167
-153
-1
-4
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -26,11 +21,6 @@ Parent Board ID: 1
 Rolls left: [2]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-162
-153
-1
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -49,11 +39,6 @@ Parent Board ID: 1
 Rolls left: [2]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-162
-153
-3
-3
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -72,11 +57,6 @@ Parent Board ID: 1
 Rolls left: [2]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-162
-153
-1
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -95,11 +75,6 @@ Parent Board ID: 1
 Rolls left: [2]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-162
-153
-2
-4
-0
 Board's value: 111.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -118,11 +93,6 @@ Parent Board ID: 1
 Rolls left: [5]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-165
-153
-1
-4
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -141,11 +111,6 @@ Parent Board ID: 1
 Rolls left: [5]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-165
-153
-3
-3
-0
 Board's value: 117.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -164,11 +129,6 @@ Parent Board ID: 1
 Rolls left: [5]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-165
-153
-2
-4
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -187,11 +147,6 @@ Parent Board ID: 1
 Rolls left: [5]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-165
-153
-2
-3
-0
 Board's value: 115.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -210,11 +165,6 @@ Parent Board ID: 1
 Rolls left: [5]
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-165
-153
-2
-4
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -233,11 +183,6 @@ Parent Board ID: 2
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -256,11 +201,6 @@ Parent Board ID: 2
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -279,11 +219,6 @@ Parent Board ID: 2
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -302,11 +237,6 @@ Parent Board ID: 2
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-3
-0
 Board's value: 110.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -325,11 +255,6 @@ Parent Board ID: 2
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -348,11 +273,6 @@ Parent Board ID: 3
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -371,11 +291,6 @@ Parent Board ID: 3
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -394,11 +309,6 @@ Parent Board ID: 3
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-3
-0
 Board's value: 110.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -417,11 +327,6 @@ Parent Board ID: 3
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-3
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -440,11 +345,6 @@ Parent Board ID: 3
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-2
-0
 Board's value: 115.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -463,11 +363,6 @@ Parent Board ID: 3
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-3
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -486,11 +381,6 @@ Parent Board ID: 4
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -509,11 +399,6 @@ Parent Board ID: 4
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -532,11 +417,6 @@ Parent Board ID: 4
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -555,11 +435,6 @@ Parent Board ID: 4
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -578,11 +453,6 @@ Parent Board ID: 4
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -601,11 +471,6 @@ Parent Board ID: 5
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -624,11 +489,6 @@ Parent Board ID: 5
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-3
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -647,11 +507,6 @@ Parent Board ID: 5
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-4
-0
 Board's value: 111.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -670,11 +525,6 @@ Parent Board ID: 5
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -693,11 +543,6 @@ Parent Board ID: 5
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-4
-0
 Board's value: 111.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -716,11 +561,6 @@ Parent Board ID: 5
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 1
 Black's taken pieces: 0 | Black's completed pieces: 0
-161
-153
-1
-4
-0
 Board's value: 108.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -739,11 +579,6 @@ Parent Board ID: 6
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -762,11 +597,6 @@ Parent Board ID: 6
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -785,11 +615,6 @@ Parent Board ID: 6
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -808,11 +633,6 @@ Parent Board ID: 6
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -831,11 +651,6 @@ Parent Board ID: 7
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -854,11 +669,6 @@ Parent Board ID: 7
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -877,11 +687,6 @@ Parent Board ID: 7
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-3
-0
 Board's value: 110.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -900,11 +705,6 @@ Parent Board ID: 7
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -923,11 +723,6 @@ Parent Board ID: 7
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-3
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -946,11 +741,6 @@ Parent Board ID: 8
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -969,11 +759,6 @@ Parent Board ID: 8
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-3
-0
 Board's value: 114.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -992,11 +777,6 @@ Parent Board ID: 8
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-4
-0
 Board's value: 109.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1015,11 +795,6 @@ Parent Board ID: 8
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1038,11 +813,6 @@ Parent Board ID: 8
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-4
-0
 Board's value: 111.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1061,11 +831,6 @@ Parent Board ID: 9
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-3
-0
 Board's value: 110.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1084,11 +849,6 @@ Parent Board ID: 9
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-2
-0
 Board's value: 115.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1107,11 +867,6 @@ Parent Board ID: 9
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1130,11 +885,6 @@ Parent Board ID: 9
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1153,11 +903,6 @@ Parent Board ID: 10
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-2
-3
-0
 Board's value: 110.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1176,11 +921,6 @@ Parent Board ID: 10
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-4
-2
-0
 Board's value: 115.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1199,11 +939,6 @@ Parent Board ID: 10
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-1
-4
-0
 Board's value: 107.0
   12                  17   18                  23
 ---------------------------------------------------
@@ -1222,11 +957,6 @@ Parent Board ID: 10
 Rolls left: []
 White's taken pieces: 0 | White's completed pieces: 0
 Black's taken pieces: 0 | Black's completed pieces: 0
-160
-153
-3
-3
-0
 Board's value: 112.0
   12                  17   18                  23
 ---------------------------------------------------

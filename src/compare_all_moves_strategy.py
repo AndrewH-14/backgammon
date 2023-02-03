@@ -45,6 +45,14 @@ class CompareAllMoves(Strategy):
         sum_distances_opponent = 0
         for piece in opponent_pieces:
             sum_distances_opponent = sum_distances_opponent + piece.spaces_to_home()
+
+        # New feature calculation (Pieces in best quadrant)
+        num_pieces_in_best_locations = 0
+        for location in range(1, 25):
+            pieces = myboard.pieces_at(location)
+            if len(pieces) != 0 and ((location == 5) or (location == 20)):
+                num_pieces_in_best_locations += len(pieces)
+
         return {
             'number_occupied_spaces': number_occupied_spaces,
             'opponents_taken_pieces': opponents_taken_pieces,
@@ -54,6 +62,7 @@ class CompareAllMoves(Strategy):
             'sum_single_distance_away_from_home': sum_single_distance_away_from_home,
             'pieces_on_board': pieces_on_board,
             'sum_distances_to_endzone': sum_distances_to_endzone,
+            'num_pieces_in_best_locations': num_pieces_in_best_locations
         }
 
     # Function that will start the process to determine the best move, then
