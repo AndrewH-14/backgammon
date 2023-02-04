@@ -6,6 +6,7 @@ from src.strategy_factory import StrategyFactory
 from src.strategies import HumanStrategy
 
 import src.weight
+import src.hash
 
 import os
 import threading
@@ -18,15 +19,17 @@ prog_id_str = sys.argv[1]
 num_prog    = int(sys.argv[2])
 
 # Generate weigths and store them in a list
-res = [[a, b, c, d, e, f, g, h, i] for a in [0.75, 1]
-                                   for b in [-0.75, -1.0]
-                                   for c in [-0.75, -1.0]
-                                   for d in [-0.25]
-                                   for e in [0.9]
-                                   for f in [0.9]
-                                   for g in [0.9, 1]
-                                   for h in [-0.9, -1.0]
-                                   for i in [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]]
+"""
+res = [[a, b, c, d, e, f, g, h, i] for a in [0.5, 0.75, 1.00]
+                                   for b in [-0.5, -0.75, -1.0]
+                                   for c in [-0.5, -0.75, -1.0]
+                                   for d in [0.25, 0, -0.25]
+                                   for e in [0.75, 1.0]
+                                   for f in [0.75, 1.0]
+                                   for g in [0]
+                                   for h in [0.75, 1.0]
+                                   for i in [0.25, 0.5, 0.75, 1.0]]
+"""
 
 # Get the weights from a file
 # res = []
@@ -42,7 +45,7 @@ res = [[a, b, c, d, e, f, g, h, i] for a in [0.75, 1]
 #                 float(weight_list[4]), float(weight_list[5]), float(weight_list[6]), float(weight_list[7])])
 # combination_file.close()
 
-# res = [[0.75,-0.75,-0.75,-0.25,1.0,1.0,1.0,-1.0]]
+res = [[0.75, -0.5, -1.0, -0.25, 1.0, 0.75, 0, 0.75, 0.25]]
 
 # Compute the start and end index
 num_weights = len(res)
@@ -71,9 +74,13 @@ class thread():
     def run(self):
         # Print off the
         # Store the results file name
-        final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
+        # final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
+        final_file_name = "results.txt"
         final_file = open(final_file_name, "w")
         final_file.close()
+
+        # table_state_win_percentages = {}
+
         # Iterate through the lines that this thread is responsible for
         for idx in range(self.start_idx, self.end_idx + 1):
             # Win count variables
@@ -104,7 +111,8 @@ class thread():
             # If the current weight has a win percentage over 50 record it
             win_percentage = white_win_count / self.num_games
             if (win_percentage > 0.55):
-                final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
+                #final_file_name = self.thread_name + "-results-" + prog_id_str + ".txt"
+                final_file_name = "results.txt"
                 final_file = open(final_file_name, "a")
                 final_file.write(str(res[idx]) + "\n" + str(win_percentage) + "\n")
                 final_file.close()

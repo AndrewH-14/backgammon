@@ -1,0 +1,1 @@
+This test was created to test weights for the novel feature of the golden point and golden anchor, each weight was run 200 times.

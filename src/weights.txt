@@ -1,0 +1,25 @@
+# Default features to be used in the weighting function
+
+# 'number_occupied_spaces': number_occupied_spaces,
+# The number of spaces that your pieces are currently occupying with more than one piece
+
+# 'opponents_taken_pieces': opponents_taken_pieces,
+# The number of opponent's pieces we currently have taken
+
+# 'sum_distances': sum_distances,
+# The sum of your pieces distances to the very end of the board
+
+# 'sum_distances_opponent': sum_distances_opponent,
+# The sum of the opponents pieces distances to the very end of the board
+
+# 'number_of_singles': number_of_singles,
+# The amount of spaces we occupy with only one piece on them
+
+# 'sum_single_distance_away_from_home': sum_single_distance_away_from_home,
+# The sum of your single pieces distance to the very end of the board
+
+# 'pieces_on_board': pieces_on_board,
+# The number of pieces that you currently have on the board.
+
+# 'sum_distances_to_endzone': sum_distances_to_endzone,
+# The sum of your pieces distances to the start of the endzone

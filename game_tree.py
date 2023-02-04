@@ -191,10 +191,11 @@ def evaluate_board(player1, player2):
     opponents_taken_pieces = player2[0][0]
     # Caculate the value
     board_value = sum_distances - \
-                  (float(sum_distances_opponent) / 3) + \
-                  (2 * num_singles) - \
-                  num_occupied_spaces - \
-                  opponents_taken_pieces
+                (float(sum_distances_opponent) / 3) + \
+                (2 * num_singles) - \
+                num_occupied_spaces - \
+                opponents_taken_pieces
+
     return board_value
 
 """
@@ -216,6 +217,8 @@ for idx in range(len(new_boards)):
     print("State " + str(idx + 1) + ": " + convert_move(new_boards[idx][2]) + " " + convert_move(new_boards[idx][3]) + " " + str(evaluate_board(new_boards[idx][0], new_boards[idx][1])))
 print("")
 
+resulting_states_avg_utility = []
+
 # For each board, the opponent can either roll a [1,6], [3,5], [2, 3], [1,2]
 for idx in range(len(new_boards)):
     # THe boards and moves after player1 has rolled a [1,6]
@@ -223,30 +226,55 @@ for idx in range(len(new_boards)):
     new_boards1 = get_new_boards(new_boards[idx][1], new_boards[idx][0], [1,6], "descending")
     print("Previous State: " + str(idx + 1))
     print("Roll: [1,6]")
+    min_utility1 = 10000000
     for idx1 in range(len(new_boards1)):
-        print("State " + str(idx1 + 1) + ": " + convert_move(new_boards1[idx1][2]) + " " + convert_move(new_boards1[idx1][3]) + " " + str(evaluate_board(new_boards1[idx1][0], new_boards1[idx1][1])))
-    print("")
+        print("State " + str(idx1 + 1) + ": " + convert_move(new_boards1[idx1][2]) + " " + convert_move(new_boards1[idx1][3]) + " " + str(round(evaluate_board(new_boards1[idx1][1], new_boards1[idx1][0]), 2)))
+        if round(evaluate_board(new_boards1[idx1][1], new_boards1[idx1][0]), 5) < min_utility1:
+            min_utility1 = round(evaluate_board(new_boards1[idx1][1], new_boards1[idx1][0]), 5)
+    print("Min Utility: " + str(min_utility1) + "\n")
 
     # The boards and moves after player1 has rolled a [3,5]
     new_boards2 = get_new_boards(new_boards[idx][1], new_boards[idx][0], [3,5], "descending")
     print("Previous State: " + str(idx + 1))
     print("Roll: [3,5]")
+    min_utility2 = 1000000
     for idx2 in range(len(new_boards2)):
-        print("State " + str(idx2 + 1) + ": " + convert_move(new_boards2[idx2][2]) + " " + convert_move(new_boards2[idx2][3]) + " " + str(evaluate_board(new_boards2[idx2][0], new_boards2[idx2][1])))
-    print("")
+        print("State " + str(idx2 + 1) + ": " + convert_move(new_boards2[idx2][2]) + " " + convert_move(new_boards2[idx2][3]) + " " + str(round(evaluate_board(new_boards2[idx2][1], new_boards2[idx2][0]), 2)))
+        if round(evaluate_board(new_boards2[idx2][1], new_boards2[idx2][0]), 5) < min_utility2:
+            min_utility2 = round(evaluate_board(new_boards2[idx2][1], new_boards2[idx2][0]), 5)
+    print("Min Utility: " + str(min_utility2) + "\n")
 
     # The boards and moves after player1 has rolled a [2,3]
     new_boards3 = get_new_boards(new_boards[idx][1], new_boards[idx][0], [2,3], "descending")
     print("Previous State: " + str(idx + 1))
     print("Roll: [2,3]")
+    min_utility3 = 1000000
     for idx3 in range(len(new_boards3)):
-        print("State " + str(idx3 + 1) + ": " + convert_move(new_boards3[idx3][2]) + " " + convert_move(new_boards3[idx3][3]) + " " + str(evaluate_board(new_boards3[idx3][0], new_boards3[idx3][1])))
-    print("")
+        print("State " + str(idx3 + 1) + ": " + convert_move(new_boards3[idx3][2]) + " " + convert_move(new_boards3[idx3][3]) + " " + str(round(evaluate_board(new_boards3[idx3][1], new_boards3[idx3][0]), 2)))
+        if round(evaluate_board(new_boards3[idx3][1], new_boards3[idx3][0]), 5) < min_utility3:
+            min_utility3 = round(evaluate_board(new_boards3[idx3][1], new_boards3[idx3][0]), 5)
+    print("Min Utility: " + str(min_utility3) + "\n")
 
     # The boards and moves after player1 has rolled a [1,2]
     new_boards4 = get_new_boards(new_boards[idx][1], new_boards[idx][0], [1,2], "descending")
     print("Previous State: " + str(idx + 1))
     print("Roll: [1,2]")
+    min_utility4 = 1000000
     for idx4 in range(len(new_boards4)):
-        print("State " + str(idx4 + 1) + ": " + convert_move(new_boards4[idx4][2]) + " " + convert_move(new_boards4[idx4][3]) + " " + str(evaluate_board(new_boards4[idx4][0], new_boards4[idx4][1])))
-    print("")
+        print("State " + str(idx4 + 1) + ": " + convert_move(new_boards4[idx4][2]) + " " + convert_move(new_boards4[idx4][3]) + " " + str(round(evaluate_board(new_boards4[idx4][1], new_boards4[idx4][0]), 2)))
+        if round(evaluate_board(new_boards4[idx4][1], new_boards4[idx4][0]), 5) < min_utility4:
+            min_utility4 = round(evaluate_board(new_boards4[idx4][1], new_boards4[idx4][0]), 5)
+    print("Min Utility: " + str(min_utility4) + "\n")
+
+    # Calculate the resulting avg utility
+    resulting_states_avg_utility.append((min_utility1 + min_utility2 + min_utility3 + min_utility4) / 4)
+
+print("Initial State:")
+print("Roll: [5,2]")
+print("Resulting State | Move1    | Move2    | Current Utility | Avg Minimum Utility")
+print("="*80)
+for idx in range(len(new_boards)):
+    # print("State " + str(idx + 1) + ": " + convert_move(new_boards[idx][2]) + " " + convert_move(new_boards[idx][3]) + " " + str(evaluate_board(new_boards[idx][0], new_boards[idx][1])) +  " Avg Resulting Utility: " + str(resulting_states_avg_utility[idx]))
+    print("State: %2s \t| %-8s | %-8s | %-5s\t        | %-8s" %(str(idx + 1), convert_move(new_boards[idx][2]), convert_move(new_boards[idx][3]), str(evaluate_board(new_boards[idx][0], new_boards[idx][1])), str(resulting_states_avg_utility[idx])))
+print("")
+

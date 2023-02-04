@@ -29,19 +29,12 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{mathpazo} % Use the Palatino font
-
 \usepackage{graphicx} % Required for including images
-
 \usepackage{booktabs} % Required for better horizontal rules in tables
-
 \usepackage{listings} % Required for insertion of code
-
 \usepackage{enumerate} % To modify the enumerate environment
-
 \usepackage{color} % To color the code
-
 \usepackage{float} % here for H placement parameter
-
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -51,15 +44,10 @@
 %----------------------------------------------------------------------------------------
 
 \title{Homework \#1} % Assignment title
-
 \author{Andrew Hankins} % Student name
-
 \date{February 8th, 2023} % Due date
-
 \institute{University of Alabama \\ College of Engineering} % Institute or school name
-
 \class{Artificial Intelligence (CS 565)} % Course or class name
-
 \professor{Dr. Monica Anderson Herzog} % Professor or teacher in charge of the assignment
 
 %----------------------------------------------------------------------------------------
@@ -72,7 +60,9 @@
 %	ASSIGNMENT CONTENT
 %----------------------------------------------------------------------------------------
 
-%------------------------------------------------
+%-------------------------------------------------------------------
+% SECTION 1: UPDATED PYTHON FILES
+%-------------------------------------------------------------------
 
 \section{Updated Python Files}
 
@@ -119,7 +109,7 @@
 \begin{problem}
 	\lstinputlisting[
 		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins3, % Label for referencing this listing
+		label=lst:comparemoves, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -137,23 +127,29 @@
 	]{../src/compare_all_moves_strategy.py}
 \end{problem}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
+% SECTION 2: EXPLANATION OF NOVEL FEATURE
+%----------------------------------------------------------------------
 
-\section*{Explanation of Novel Feature}
+\section{Explanation of Novel Feature}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+% SECTION 3: COMPARISON OF 5 BEST WEIGHTING FUNCTIONS
+%-------------------------------------------------------------------------------------------
 
-\section*{Comparison of 5 Best Weighting Functions}
+\section{Comparison of 5 Best Weighting Functions}
 
-The five best weighting functions that I found.
+\quad\quad The following section will discuss the five best weighting functions that I tested throughout my searching process.
 
-\subsection*{Best Weighting Function}
+%----------------------------------------------------
+% Subsection 1: Best Weighting Function
+
+\subsection{Best Weighting Function}
 
 \hfill\\ \\  The first weighting function that I found
 
 \begin{lstlisting}[
-		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins10, % Label for referencing this listing
+		label=lst:weighting1, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -191,22 +187,24 @@ class player1_achankins(CompareAllMoves):
 		\hline
 		Opponent & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
 		\hline\hline
-		MoveFurthestBackStrategy &  6 & 10 & 15 & 100\% & 1 \\
+		CAMWD &  6 & 10 & 15 & 100\% & 1 \\
 		\hline
-		CompareAllWeightingDistance & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		MFBS & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
 		\hline
 	\end{tabular}
 	\caption{Weighting algorithm 1}
 	\label{table:1}
 \end{table}
 
-\subsection*{Second Best Weighting Function}
+%---------------------------------------------------------------
+% Subsection 2: Second Best Weighting Function
 
-\hfill\\ \\  The first weighting function that I found
+\subsection{Second Best Weighting Function}
+
+\hfill\\ \\  The second weighting function that I found
 
 \begin{lstlisting}[
-		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins10, % Label for referencing this listing
+		label=lst:weighting2, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -242,24 +240,26 @@ class player1_achankins(CompareAllMoves):
 	\centering
 	\begin{tabular}{||c | c c c c c||}
 		\hline
-		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
+		Opponent & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
 		\hline\hline
-		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		CAMWD &  6 & 10 & 15 & 100\% & 1 \\
 		\hline
-		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		MFBS & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
 		\hline
 	\end{tabular}
 	\caption{Weighting algorithm 2}
 	\label{table:2}
 \end{table}
 
-\subsection*{Third Best Weighting Function}
+%---------------------------------------------------------------
+% Subsection 3: Third Best Weighting Function
 
-\hfill\\ \\  The first weighting function that I found
+\subsection{Third Best Weighting Function}
+
+\hfill\\ \\  The third weighting function that I found
 
 \begin{lstlisting}[
-		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins10, % Label for referencing this listing
+		label=lst:weighting3, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -288,31 +288,32 @@ class player1_achankins(CompareAllMoves):
                              1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
                             -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
     return board_value
-
 \end{lstlisting}
 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{||c | c c c c c||}
 		\hline
-		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
+		Opponent & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
 		\hline\hline
-		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		CAMWD &  6 & 10 & 15 & 100\% & 1 \\
 		\hline
-		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		MFBS & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
 		\hline
 	\end{tabular}
 	\caption{Weighting algorithm 3}
 	\label{table:3}
 \end{table}
 
-\subsection*{Fourth Best Weighting Function}
+%---------------------------------------------------------------
+% Subsection 4: Fourth Best Weighting Function
 
-\hfill\\ \\  The first weighting function that I found
+\subsection{Fourth Best Weighting Function}
+
+\hfill\\ \\  The fourth weighting function that I found
 
 \begin{lstlisting}[
-		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins10, % Label for referencing this listing
+		label=lst:weighting4, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -341,33 +342,32 @@ class player1_achankins(CompareAllMoves):
                              1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
                             -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
     return board_value
-
 \end{lstlisting}
 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{||c | c c c c c||}
 		\hline
-		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
+		Opponent & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std Dev. \\ [0.5ex]
 		\hline\hline
-		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		CAMWD &  6 & 10 & 15 & 100\% & 1 \\
 		\hline
-		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		MFBS & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
 		\hline
 	\end{tabular}
 	\caption{Weighting algorithm 4}
 	\label{table:4}
 \end{table}
 
-\pagebreak
+%---------------------------------------------------------------
+% Subsection 5: Fifth Best Weighting Function
 
-\subsection*{Fifth Best Weighting Function}
+\subsection{Fifth Best Weighting Function}
 
-\hfill\\ \\  The first weighting function that I found
+\hfill\\ \\  The fifth weighting function that I found
 
 \begin{lstlisting}[
-		title=compare\_all\_moves\_strategy.py, % Caption above the listing
-		label=lst:achankins10, % Label for referencing this listing
+		label=lst:weighting5, % Label for referencing this listing
 		language=Python, % Use Perl functions/syntax highlighting
 		frame=single, % Frame around the code listing
 		showstringspaces=false, % Don't put marks in string spaces
@@ -396,35 +396,38 @@ class player1_achankins(CompareAllMoves):
                              1.0   * (board_stats['pieces_on_board'] / 15.0)                                        + \
                             -1.0   * (board_stats['sum_distances_opponent'] / 163.0)
     return board_value
-
 \end{lstlisting}
 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{||c | c c c c c||}
 		\hline
-		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
+		Opponent & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
 		\hline\hline
-		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		CAMWD &  6 & 10 & 15 & 100\% & 1 \\
 		\hline
-		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
+		MFBS & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
 		\hline
 	\end{tabular}
 	\caption{Weighting algorithm 5}
 	\label{table:5}
 \end{table}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------
+% SECTION 4: PLAYER COMPARISONS
+%-------------------------------------------------------------------
 
 \section*{Player Comparisons}
+
+\quad \quad The following section compares the performance of both player1\_achankins and player2\_achankins against the MoveFurthestBackStrategy and CompareAllMovesWeightingDistance players. This test was done by running three sets of 200 games per player per opponent. After each run, the winning percentage of the player was recorded. Once all three runs had been completed, the average win percentage and standard deviation was calculated. This testing system was designed to accurately assess the newly created players by using a sufficient amount of games multiple times in order to ensure the result was correct.
 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{||c | c c c c c||}
 		\hline
-		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
+		Player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
 		\hline\hline
-		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		player1\_achankins &  96.0\% & 94.0\% & 94.5\% & 94.83\% & 0.85 \\
 		\hline
 		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
 		\hline
@@ -437,9 +440,9 @@ class player1_achankins(CompareAllMoves):
 	\centering
 	\begin{tabular}{||c | c c c c c||}
 		\hline
-		player & Run 1&   Run 2 & Run 3 & Avg. Win Rate & Std. Dev. \\ [0.5ex]
+		Player & Run 1 &   Run 2 & Run 3  & Avg. Win Rate & Std. Dev. \\ [0.5ex]
 		\hline\hline
-		player1\_achankins &  6 & 10 & 15 & 100\% & 1 \\
+		Player1\_achankins &  61.5\% & 61.5\% & 65.5\% & 62.83\% & 1.89 \\
 		\hline
 		player2\_achankins & 2 & 3 & 4 & 100\% & 1 \\ [1ex]
 		\hline
@@ -448,9 +451,18 @@ class player1_achankins(CompareAllMoves):
 	\label{table:7}
 \end{table}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------
+% SECTION 6: MINIMAX GAME TREE
+%-------------------------------------------------------------------
+
+\pagebreak
 
 \section*{Game Tree}
 
+\quad \quad The minimax algorithm is a strategy designed to select the optimal move in an adversarial game by assuming the opponent always selects the move that
+will minimize your score. By looking ahead we are able to see the worst case scenario from each roll and select the best possible course of action. For example from the
+below minimax tree we can determine that going to state 10 will give us the best possible outcome.
+
+\lstinputlisting[language={}, basicstyle=\tiny]{../minimax_tree.txt}
 
 \end{document}

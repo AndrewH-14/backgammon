@@ -21,6 +21,7 @@ class CompareAllMoves(Strategy):
         number_occupied_spaces = 0
         sum_single_distance_away_from_home = 0
         sum_distances_to_endzone = 0
+        num_locations_with_two_pieces = 0
         # Calculate the sum of the pieces distance to home and the sum of the
         # pieces distance to the endzone (last section of board)
         for piece in pieces:
@@ -37,6 +38,8 @@ class CompareAllMoves(Strategy):
                     sum_single_distance_away_from_home += 25 - pieces[0].spaces_to_home()
                 elif len(pieces) > 1: # Not counting single spaces
                     number_occupied_spaces = number_occupied_spaces + 1
+                if len(pieces) > 1 and len(pieces) == 2:
+                    num_locations_with_two_pieces += 1
         # Get the number of piece's we have taken from the opponent
         opponents_taken_pieces = len(myboard.get_taken_pieces(colour.other()))
         # Get the number of opponent's pieces on the board
@@ -47,11 +50,13 @@ class CompareAllMoves(Strategy):
             sum_distances_opponent = sum_distances_opponent + piece.spaces_to_home()
 
         # New feature calculation (Pieces in best quadrant)
+        """
         num_pieces_in_best_locations = 0
         for location in range(1, 25):
             pieces = myboard.pieces_at(location)
-            if len(pieces) != 0 and ((location == 5) or (location == 20)):
-                num_pieces_in_best_locations += len(pieces)
+            if len(pieces) > 1 and len(pieces) <=3 and ((location == 5) or (location == 20)):
+                num_pieces_in_best_locations += 1
+        """
 
         return {
             'number_occupied_spaces': number_occupied_spaces,
@@ -62,7 +67,7 @@ class CompareAllMoves(Strategy):
             'sum_single_distance_away_from_home': sum_single_distance_away_from_home,
             'pieces_on_board': pieces_on_board,
             'sum_distances_to_endzone': sum_distances_to_endzone,
-            'num_pieces_in_best_locations': num_pieces_in_best_locations
+            'num_locations_with_two_pieces': num_locations_with_two_pieces
         }
 
     # Function that will start the process to determine the best move, then
