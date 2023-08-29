@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1675545314 "/Users/andrewhankins/Documents/GitHub/backgammon/report/report.tex" "report.pdf" "report" 1675545315
+["pdflatex"] 1675550870 "/Users/andrewhankins/Documents/GitHub/backgammon/report/report.tex" "report.pdf" "report" 1675550870
   "../minimax_tree.txt" 1675526123 39288 04bbdda4c6d1ddc15c03f5e9536f75ed ""
-  "../src/achankins.py" 1675485596 2446 33947225b25a3068a633ede2cba6aab7 ""
-  "../src/compare_all_moves_strategy.py" 1675485539 9520 532bee9ce3512a132df934ec01e945d9 ""
+  "../src/achankins.py" 1675550869 2455 37f21cb35f2872700ef43b6481d691dd ""
+  "../src/compare_all_moves_strategy.py" 1675550682 11658 3bbcaaa79deef15ac3ea9a2881731767 ""
   "/Users/andrewhankins/Documents/GitHub/backgammon/report/report.tex" 1675528177 18819 e1ef0ecb82a9a3bd788729399625b937 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -71,7 +71,7 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1675013727 2826446 765ed06ab3fc889d8f97cfb6cde335cb ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "fphw.cls" 1675014566 4375 9b81e9c6a8e0385be28b54b73d98013f ""
-  "report.aux" 1675545314 2487 6b55bb71be68449c31eb75d7983909a5 "pdflatex"
+  "report.aux" 1675550870 2487 6b55bb71be68449c31eb75d7983909a5 "pdflatex"
   "report.tex" 1675528177 18819 e1ef0ecb82a9a3bd788729399625b937 ""
   (generated)
   "report.aux"

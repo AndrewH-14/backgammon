@@ -21,7 +21,7 @@ class CompareAllMoves(Strategy):
         number_occupied_spaces = 0
         sum_single_distance_away_from_home = 0
         sum_distances_to_endzone = 0
-        num_locations_with_two_pieces = 0
+        num_locations_with_two_or_three_pieces = 0
         # Calculate the sum of the pieces distance to home and the sum of the
         # pieces distance to the endzone (last section of board)
         for piece in pieces:
@@ -38,8 +38,8 @@ class CompareAllMoves(Strategy):
                     sum_single_distance_away_from_home += 25 - pieces[0].spaces_to_home()
                 elif len(pieces) > 1: # Not counting single spaces
                     number_occupied_spaces = number_occupied_spaces + 1
-                if len(pieces) > 1 and len(pieces) == 2:
-                    num_locations_with_two_pieces += 1
+                if len(pieces) > 1 and len(pieces) <= 3:
+                    num_locations_with_two_or_three_pieces += 1
         # Get the number of piece's we have taken from the opponent
         opponents_taken_pieces = len(myboard.get_taken_pieces(colour.other()))
         # Get the number of opponent's pieces on the board
@@ -48,6 +48,40 @@ class CompareAllMoves(Strategy):
         sum_distances_opponent = 0
         for piece in opponent_pieces:
             sum_distances_opponent = sum_distances_opponent + piece.spaces_to_home()
+
+        """
+        # Calculate the probability that our single pieces can be taken
+        probability_piece_can_be_taken = 0
+        for location in range(1, 25):
+            pieces1 = myboard.pieces_at(location)
+            if len(pieces1) == 1 and pieces1[0].colour == colour:
+                for idx in range (25, location, -1):
+                    if pieces1[0] != colour:
+                        # Calculate the opponent is from our location
+                        distance_to_single_piece = idx - location
+                        if distance_to_single_piece == 12: # (1/36 chance)
+                            probability_piece_can_be_taken += 1/36
+                        elif distance_to_single_piece == 11: # (2/36 chance)
+                            probability_piece_can_be_taken += 2/36
+                        elif distance_to_single_piece == 10: # (3/36 chance)
+                            probability_piece_can_be_taken += 3/36
+                        elif distance_to_single_piece == 9: # (4/36 chance)
+                            probability_piece_can_be_taken += 4/36
+                        elif distance_to_single_piece == 8: # (5/36 chance)
+                            probability_piece_can_be_taken += 5/36
+                        elif distance_to_single_piece == 7: # (6/36 chance)
+                            probability_piece_can_be_taken += 6/36
+                        elif distance_to_single_piece == 6: # (5/36 chance)
+                            probability_piece_can_be_taken += 5/36
+                        elif distance_to_single_piece == 5: # (4/36 chance)
+                            probability_piece_can_be_taken += 4/36
+                        elif distance_to_single_piece == 4: # (3/36 chance)
+                            probability_piece_can_be_taken += 3/36
+                        elif distance_to_single_piece == 3: # (2/36 chance)
+                            probability_piece_can_be_taken += 2/36
+                        elif distance_to_single_piece == 2: # (1/36 chance)
+                            probability_piece_can_be_taken += 1/36
+        """
 
         # New feature calculation (Pieces in best quadrant)
         """
@@ -67,7 +101,7 @@ class CompareAllMoves(Strategy):
             'sum_single_distance_away_from_home': sum_single_distance_away_from_home,
             'pieces_on_board': pieces_on_board,
             'sum_distances_to_endzone': sum_distances_to_endzone,
-            'num_locations_with_two_pieces': num_locations_with_two_pieces
+            'num_locations_with_two_or_three_pieces': num_locations_with_two_or_three_pieces
         }
 
     # Function that will start the process to determine the best move, then

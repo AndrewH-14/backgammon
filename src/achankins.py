@@ -34,6 +34,6 @@ class player2_achankins(CompareAllMoves):
                        float(weight_list[5])  * (board_stats['sum_single_distance_away_from_home'] / 100.0) + \
                        float(weight_list[6])  * (board_stats['pieces_on_board'] / 15.0)                     + \
                        float(weight_list[7])  * (board_stats['sum_distances_opponent'] / 163.0)             + \
-                       float(weight_list[8]) * (board_stats['num_locations_with_two_pieces'] / 7.0)
+                       float(weight_list[8]) * (board_stats['num_locations_with_two_or_three_pieces'] / 7.0)
 
         return board_value
